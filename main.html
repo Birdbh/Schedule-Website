@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>I&T LLC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("Techny Eyball.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">EVENT MAP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">RESCOURCES</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Valhalla</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">I & T<br>LLC</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">1311 Discovery Ave, V1V 1V8</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE INNOVATION AND TECHNOLOGY LLC</span></h5>
+    <p>This LLC provides an opportunity for students to collaborate and develop their interests in the realms of entrepreneurship, problem solving, technology, and innovative thought. Participants will develop a unique vision and climate for their living and learning experience through encompassing inventive idea generation, advancements in technology, and intentional partnerships. Students will get opportunities for networking, programming, and relationship building with campus and community technology and innovation hubs.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"I believe finding a community of people with similar interests and goals is the keystone to my growth and success. In the future, my hope for the LLC is to see as many different kinds of people as possible find a home where they can share a passion for Innovation and Technology."</i></p>
+      <p>Annie DeBattista, 4th Year Electrical Engineering Student, Perth, Australia</p>
+    </div>
+    <img src="building.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Residence Building:</strong> Valhalla</p>
+    <p><strong>Address:</strong> 1311 Discovery Ave, V1V 1V8</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE EVENT MAP</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">LLC EVENTS</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">RESIDENCE LIFE EVENTS</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>LLC Introductions</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Get to know your RA and your fellow LLC members.</p><br>
+    
+      <h5>Marhmellow Tower Building Competition</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Make a team of two and compete against the rest of the floor to build the tallest tower made of mini marshmellows and toothpicks</p><br>
+    
+      <h5>Club Meet & Greet</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Talk with the heads of the major engineering clubs on campus and learn how to get involved.</p><br>
+    
+      <h5>Maker Space Tour</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Join the LLC as we take a guided tour of the maker space and learn what it takes to use the Free student 3D printers, tools, soldering, and sowing stations there!</p><br>
+    
+      <h5>TBD</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">STBD</p><br>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Capture The Flag</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Join with the rest of you residence the win a campus wide capture the flag event.</p><br>
+    
+      <h5>Homecoming</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Put on your best clothes and come dance, make friends, and have a good time.</p><br>
+    
+      <h5>TBD</h5>
+      <i class="w3-text-grey">TBD</i>
+      <p class="w3-text-grey">TBD</p><br>
+    
+      <h5>TBD</h5>
+      <i class="w3-text-grey">TBD</i>
+      <p class="w3-text-grey">TBD</p><br>
+    
+      <h5>TBD</h5>
+      <i class="w3-text-grey">TBD</i>
+      <p class="w3-text-grey">TBD</p><br>
+    </div>  
+    <img src="wires.png" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RESOURCES</span></h5>
+    <h3>Technology Specific:</h3>
+
+    <h5><a href="https://www.engsoc-ubco.com/about-us" target="_blank" class="w3-hover-text-green">Engineering Society</a></h5>
+        <p class="w3-text-grey">The Engineering Society at UBC is a non-for-profit student association at UBC Okanagan. It is our responsibility to build a diverse and inclusive environment under the School of Engineering by providing social, academic and professional services. The Engineering Society is made up of a council of representatives from all constituencies ad years. These students volunteer their time to advocate for others, and ensure the perpetuity of the organization. All governance, elections, and finances are supervised by the Students Union of the Okanagan in order to ensure safety and maintain full transparency with all students.</p><br>
+
+    <h5><a href="https://soeadvising.ok.ubc.ca/" target="_blank" class="w3-hover-text-green">School of Engineering Undergraduate Academic Advising</a></h5>
+        <p class="w3-text-grey">Students at the School of Engineering are proven visionaries, taking the initiative to launch new clubs and societies to further build their skills and connections outside the classroom. The School of Engineering has a variety of student clubs and groups, and their numbers continue to grow every year. Some of the current clubs/associations include: Alpha Omega Epsilon, CSCE, CSME, Engineering Without Borders, EngSoc, Mechatronics, WiE, IDS, and IEEE</p><br>
+    <h5><a href="https://cie.apsc.ubc.ca/" target="_blank" class="w3-hover-text-green">Coordinated International Experience (CIE)</a></h5>
+        <p class="w3-text-grey">Differentiate yourself and become a globally competitive engineer with the Coordinated International Experience (CIE) exchange program. Customized for Applied Science students, study at one of our internationally acclaimed partner institutions. Diversify your resume without extending your degree length, and take advantage of generous funding opportunities.
+        </p><br>
+    <h5><a href="https://engineering.ok.ubc.ca/student-resources/clubs-associations/" target="_blank" class="w3-hover-text-green">Engineering Clubs & Associations</a></h5>
+        <p class="w3-text-grey">Undergraduate Academic Advising provides assistance with academic planning, interpreting course requirements, and resolving academic and personal problems.</p><br>
+
+    <h3>Student-Wide:</h3>
+
+    <h5><a href="https://students.ok.ubc.ca/academic-success/learning-hub/" target="_blank" class="w3-hover-text-green">Student Learning Hub</a></h5>
+        <p class="w3-text-grey">The Student Learning Hub is for everyone and our services are free. We invite UBCO students from all disciplines and year levels to access a range of supports from peers and professionals that include tutoring in math, sciences, languages, and writing, as well as help with study skills and learning strategies. Visit us early and often to build the skills, strategies, and behaviours that are essential to being a confident and independent learner.</p><br>
+    <h5><a href="https://svpro.ok.ubc.ca/" target="_blank" class="w3-hover-text-green">SVPRO</a></h5>
+        <p class="w3-text-grey">The Sexual Violence Prevention and Response Office (SVPRO) is a confidential place for those who have been impacted by any form of sexual or gender-based violence, harassment, or harm, regardless of where or when it took place. SVPRO aims to be a safer space for all UBC students, faculty, and staff by respecting each person’s unique and multiple identities and experiences. All genders and sexualities are welcome.</p><br>
+    <h5><a href="https://students.ok.ubc.ca/academic-success/advising-options/" target="_blank" class="w3-hover-text-green">Academic Advising</a></h5>
+        <p class="w3-text-grey">There are a variety of advisors here to help students on campus: Academic & Career Advising, Indigenous Student Advising, International Student Advising, and Career Development</p><br>
+    <h5><a href="https://students.ok.ubc.ca/academic-success/disability-resources/" target="_blank" class="w3-hover-text-green">Disability Resource Center</a></h5>
+        <p class="w3-text-grey">The Disability Resource Centre (DRC) facilitates disability-related accommodations and programming initiatives to remove barriers for students with disabilities and ongoing medical conditions.</p><br>
+    <h5><a href="https://global.ubc.ca/go-global" target="_blank" class="w3-hover-text-green">Go Global</a></h5>
+        <p class="w3-text-grey">Go Global programs let UBC students travel abroad to study, conduct research, or take a course overseas with UBC students and professors.</p><br>
+    <h5><a href="https://www.suo.ca/student-associations/" target="_blank" class="w3-hover-text-green">Student Clubs, Groups, and Associations</a></h5>
+        <p class="w3-text-grey">Aerospace or anime…knitting or the outdoors…there are dozens of student groups at UBC Okanagan. Build confidence. Meet friends. Step outside your comfort zone. Find that perfect student group and find yourself.</p><br>
+    
+
+        
+    <img src="peps.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> If you are confused and need help at any time feel free to knock on my door or send me an message via: email, whatsapp, snapchat, or instagram!</p>
+    <p><strong>Contact</strong> right now by sending a message below:</p>
+    <form action="https://formspree.io/f/mbjeooqy" method="POST" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Topic of Inquiry" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Question" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://ok.ubc.ca/" title="W3.CSS" target="_blank" class="w3-hover-text-green">UBCO</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
