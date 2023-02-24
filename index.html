@@ -91,59 +91,48 @@ body, html {
     </div>
 
     <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-      <h5>LLC Introductions</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Get to know your RA and your fellow LLC members.</p><br>
+      <h5 name="title"></h5>
+      <i name ="date" class="w3-text-grey"></i>
+      <p name ="desc"  class="w3-text-grey"></p><br>
     
-      <h5>Marhmellow Tower Building Competition</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Make a team of two and compete against the rest of the floor to build the tallest tower made of mini marshmellows and toothpicks</p><br>
+      <h5 name="title"></h5>
+      <i name ="date" class="w3-text-grey"></i>
+      <p name ="desc"  class="w3-text-grey"></p><br>
     
-      <h5>Club Meet & Greet</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Talk with the heads of the major engineering clubs on campus and learn how to get involved.</p><br>
+      <h5 name="title"></h5>
+      <i name ="date" class="w3-text-grey"></i>
+      <p name ="desc"  class="w3-text-grey"></p><br>
     
-      <h5>Maker Space Tour</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Join the LLC as we take a guided tour of the maker space and learn what it takes to use the Free student 3D printers, tools, soldering, and sowing stations there!</p><br>
+      <h5 name="title"></h5>
+      <i name ="date" class="w3-text-grey"></i>
+      <p name ="desc"  class="w3-text-grey"></p><br>
     
-      <h5>Something Climate Changy</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Environment impact awaress thing with cleanup or something, idk</p><br>
+      <h5 name="title"></h5>
+      <i name ="date" class="w3-text-grey"></i>
+      <p name ="desc" class="w3-text-grey"></p><br>
 
-      <h5>UBCO sustainability tour</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">TBD</p><br>
-
-      <h5>Nenchako Escape Room</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Sign up by yourself or with a team and try and escape the room before time runs out</p><br>
-
-      <h5 id="title">Nenchako Escape Room</h5>
-      <i id ="date"class="w3-text-grey">11/12/1</i>
-      <p id="description"class="w3-text-grey">Sign up by yourself or with a team and try and escape the room before time runs out</p><br>
     </div>
 
     <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Capture The Flag</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Join with the rest of you residence the win a campus wide capture the flag event.</p><br>
+      <h5 name="titlerl">Capture The Flag</h5>
+      <i name ="daterl" class="w3-text-grey">11/12/1</i>
+      <p name ="descrl" class="w3-text-grey">Join with the rest of you residence the win a campus wide capture the flag event.</p><br>
     
-      <h5>Homecoming</h5>
-      <i class="w3-text-grey">11/12/1</i>
-      <p class="w3-text-grey">Put on your best clothes and come dance, make friends, and have a good time.</p><br>
+      <h5 name="titlerl">Homecoming</h5>
+      <i name ="daterl" class="w3-text-grey">11/12/1</i>
+      <p name ="descrl" class="w3-text-grey">Put on your best clothes and come dance, make friends, and have a good time.</p><br>
     
-      <h5>TBD</h5>
-      <i class="w3-text-grey">TBD</i>
-      <p class="w3-text-grey">TBD</p><br>
+      <h5 name="titlerl">TBD</h5>
+      <i name ="daterl" class="w3-text-grey">TBD</i>
+      <p name ="descrl" class="w3-text-grey">TBD</p><br>
     
-      <h5>TBD</h5>
-      <i class="w3-text-grey">TBD</i>
-      <p class="w3-text-grey">TBD</p><br>
+      <h5 name="titlerl">TBD</h5>
+      <i name ="daterl" class="w3-text-grey">TBD</i>
+      <p name ="descrl" class="w3-text-grey">TBD</p><br>
     
-      <h5>TBD</h5>
-      <i class="w3-text-grey">TBD</i>
-      <p class="w3-text-grey">TBD</p><br>
+      <h5 name="titlerl">TBD</h5>
+      <i name ="daterl" class="w3-text-grey">TBD</i>
+      <p name ="descrl" class="w3-text-grey">TBD</p><br>
     </div>  
     <img src="wires.png" style="width:100%;max-width:1000px;margin-top:32px;">
   </div>
@@ -211,6 +200,10 @@ body, html {
 </footer>
 
 <script>
+//Get Day and Month current
+const month = new Date().getMonth() + 1;
+const day =  new Date().getDate();
+
 // Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
@@ -227,45 +220,114 @@ function openMenu(evt, menuName) {
 }
 document.getElementById("myLink").click();
 
-const month = new Date().getMonth()
+function getstartindex(itevents,month,day){
+  for (let i = 0; i < itevents.length; i++){
+    if (itevents[i].month >= month){
+      return start_index = i;
+    }
+  }
+}
 
+function setInnerHTML(itevents,start_index,titles,dates,descs){
+  for (let i = 0; i < 5; i++){
+    titles[i].innerHTML = itevents[start_index + i].title;
+    dates[i].innerHTML = itevents[start_index + i].day.toString() + "/" + itevents[start_index + i].month.toString();
+
+    descs[i].innerHTML = itevents[start_index + i].desc;
+  }
+  return
+}
+//List of our Innovation and Technology Events
 var itevents = [{
-  day: 2,
-  month: 2,
-  title: "the best",
-  description: "we do cool stuff"},
+  day: 17,
+  month: 9,
+  title: "LLC Introductions",
+  desc: "Get to know your RA and your fellow LLC members."},
   {
-  day: 2,
-  month: 2,
-  title: "the best",
-  description: "we do cool stuff"},
+  day: 20,
+  month: 9,
+  title: "Marhmellow Tower Building Competition",
+  desc: "Make a team of two and compete against the rest of the floor to build the tallest tower made of mini marshmellows and toothpicks"},
   {
-  day: 2,
-  month: 2,
-  title: "the best",
-  description: "we do cool stuff"},
+  day: 27,
+  month: 9,
+  title: "Club Meet & Greet",
+  desc: "Talk with the heads of the major engineering clubs on campus and learn how to get involved."},
   {
-  day: 2,
-  month: 2,
-  title: "the best",
-  description: "we do cool stuff"},
+  day: 10,
+  month: 10,
+  title: "Maker Space Tour",
+  desc: "Join the LLC as we take a guided tour of the maker space and learn what it takes to use the Free student 3D printers, tools, soldering, and sowing stations there!"},
   {
-  day: 2,
-  month: 2,
-  title: "the best",
-  description: "we do cool stuff"},
+  day: 20,
+  month: 10,
+  title: "Something Climate Changy",
+  desc: "Environment impact awaress thing with cleanup or something, idk"},
   {
-  day: 2,
-  month: 2,
-  title: "the best",
-  description: "we do cool stuff"},
-  
-]
+  day: 27,
+  month: 10,
+  title: "UBCO sustainability tour",
+  desc: "TBD"},
+  {
+  day: 10,
+  month: 11,
+  title: "Nenchako Escape Room",
+  desc: "Sign up by yourself or with a team and try and escape the room before time runs out"},
+];
 
+var rlevents = [{
+  day: 27,
+  month: 9,
+  title: "Capture The Flag",
+  desc: "Join with the rest of you residence the win a campus wide capture the flag event."},
+  {
+  day: 10,
+  month: 10,
+  title: "Homecoming",
+  desc: "Make a team of two and compete against the rest of the floor to build the tallest tower made of mini marshmellows and toothpicks"},
+  {
+  day: 20,
+  month: 10,
+  title: "Basketball Tournament",
+  desc: "Join the Vallhalla Team as we compete against the other residences in a tournament style mashup"},
+  {
+  day: 22,
+  month: 11,
+  title: "Ski Trip",
+  desc: "Get your ski on and make a bake"},
+  {
+  day: 20,
+  month: 12,
+  title: "Bla",
+  desc: "Bla"},
+  {
+  day: 27,
+  month: 12,
+  title: "Bla",
+  desc: "Bla"},
+  {
+  day: 10,
+  month: 12,
+  title: "Bla",
+  desc: "Bla"},
+];
 
-document.getElementById('title').innerHTML = itevents.title
-document.getElementById('date').innerHTML = itevents.day
-document.getElementById('description').innerHTML = itevents.description
+var start_index = getstartindex(itevents,month,day);
+
+var titles = document.getElementsByName('title');
+var dates = document.getElementsByName('date');
+var descs = document.getElementsByName('desc');
+
+setInnerHTML(itevents,start_index,titles,dates,descs);
+
+var rl_start_index = getstartindex(rlevents,month,day);
+
+var titles = document.getElementsByName('titlerl');
+var dates = document.getElementsByName('daterl');
+var descs = document.getElementsByName('descrl');
+
+setInnerHTML(rlevents,rl_start_index,titles,dates,descs);
+
 </script>
 
 </body>
