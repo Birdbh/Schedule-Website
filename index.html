@@ -114,6 +114,14 @@ body, html {
       <h5>UBCO sustainability tour</h5>
       <i class="w3-text-grey">11/12/1</i>
       <p class="w3-text-grey">TBD</p><br>
+
+      <h5>Nenchako Escape Room</h5>
+      <i class="w3-text-grey">11/12/1</i>
+      <p class="w3-text-grey">Sign up by yourself or with a team and try and escape the room before time runs out</p><br>
+
+      <h5 id="title">Nenchako Escape Room</h5>
+      <i id ="date"class="w3-text-grey">11/12/1</i>
+      <p id="description"class="w3-text-grey">Sign up by yourself or with a team and try and escape the room before time runs out</p><br>
     </div>
 
     <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
@@ -184,7 +192,7 @@ body, html {
     <img src="peps.jpg" class="w3-image" style="width:100%">
     <p><span class="w3-tag">FYI!</span> If you are confused and need help at any time feel free to knock on my door or send me a message via: email, whatsapp, snapchat, or instagram!</p>
     <p><strong>Contact Me</strong> right now by sending a message below:</p>
-    <form action="https://formspree.io/f/mbjeooqy" method="POST" target="_blank">
+    <form action="https://formspree.io/f/mjvdwdga" method="POST" target="_blank">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Topic of Inquiry" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="Date & Time"></p>
@@ -218,6 +226,46 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
 document.getElementById("myLink").click();
+
+const month = new Date().getMonth()
+
+var itevents = [{
+  day: 2,
+  month: 2,
+  title: "the best",
+  description: "we do cool stuff"},
+  {
+  day: 2,
+  month: 2,
+  title: "the best",
+  description: "we do cool stuff"},
+  {
+  day: 2,
+  month: 2,
+  title: "the best",
+  description: "we do cool stuff"},
+  {
+  day: 2,
+  month: 2,
+  title: "the best",
+  description: "we do cool stuff"},
+  {
+  day: 2,
+  month: 2,
+  title: "the best",
+  description: "we do cool stuff"},
+  {
+  day: 2,
+  month: 2,
+  title: "the best",
+  description: "we do cool stuff"},
+  
+]
+
+
+document.getElementById('title').innerHTML = itevents.title
+document.getElementById('date').innerHTML = itevents.day
+document.getElementById('description').innerHTML = itevents.description
 </script>
 
 </body>
